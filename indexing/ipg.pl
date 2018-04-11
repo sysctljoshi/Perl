@@ -111,13 +111,13 @@ for($i; $i<=$num ; $i++ )
 
 
 sub chitti_becho1 {
-my $smtp = Net::SMTP->new("192.168.72.4",
+my $smtp = Net::SMTP->new("x.y.z.z",
                     Hello => 'localhost',
                     Timeout => 60);
-$smtp->mail("backup\@canvera.com");
-$smtp->recipient("itmonitoring\@canvera.com");
+$smtp->mail("babc@xyz.com");
+$smtp->recipient("abc@xyz.com");
 $smtp->data;
-$smtp->datasend("From: backup\@canvera.com");
+$smtp->datasend("From: abc@xyz.com");
 $smtp->datasend("\n");
 $smtp->datasend("To: itmonitoring\@canvera.com");
 $smtp->datasend("\n");
@@ -143,16 +143,16 @@ $smtp->quit;
 
 
 sub chitti_becho2 {
-my $smtp = Net::SMTP->new("192.168.72.4",
+my $smtp = Net::SMTP->new("a.b.c.d",
                     Hello => 'localhost',
                     Timeout => 60);
 
-$smtp->mail("backup\@canvera.com");
-$smtp->recipient("itmonitoring\@canvera.com");
+$smtp->mail("abc@xyz.com");
+$smtp->recipient("abc@xyz.com");
 $smtp->data;
-$smtp->datasend("From: backup\@canvera.com");
+$smtp->datasend("From: abc@xyz.com");
 $smtp->datasend("\n");
-$smtp->datasend("To: itmonitoring\@canvera.com");
+$smtp->datasend("To: abc@xyz.com");
 $smtp->datasend("\n");
 $smtp->datasend("Subject: Backup HDD  IC-$new_hdd_id Full !! - Please verify orders are copied in both the USB HDDs");
 $smtp->datasend("\n");
@@ -161,22 +161,22 @@ $smtp->datasend("\n");
 $smtp->datasend("Label the removed HDDs as IC-$new_hdd_id , email and update the team once you replaced the hdds ");
 $smtp->datasend("\n");
 $smtp->datasend("\n");
-$smtp->datasend("-Canvera IT Team-");
+$smtp->datasend("-abc@xyz.com");
 $smtp->dataend;
 $smtp->quit;
 }
 
 
 sub chitti_becho3 {
-my $smtp = Net::SMTP->new("192.168.72.4",
+my $smtp = Net::SMTP->new("1.22.3.4",
                     Hello => 'localhost',
                     Timeout => 60);
-$smtp->mail("backup\@canvera.com");
-$smtp->recipient("itmonitoring\@canvera.com");
+$smtp->mail("abc@xyz.com");
+$smtp->recipient("abc@xyz.com");
 $smtp->data;
-$smtp->datasend("From: backup\@canvera.com");
+$smtp->datasend("From: abc@xyz.com");
 $smtp->datasend("\n");
-$smtp->datasend("To: itmonitoring\@canvera.com");
+$smtp->datasend("To: abc@xyz.com");
 $smtp->datasend("\n");
 $smtp->datasend("Subject: Issues when copying IC-XXXX orders , Please check");
 $smtp->datasend("\n");
@@ -186,7 +186,7 @@ $smtp->datasend("\n");
 $smtp->datasend("\n");
 $smtp->datasend("\n");
 $smtp->datasend("\n");
-$smtp->datasend("-Canvera IT Team-");
+$smtp->datasend("abc@xyz.com");
 $smtp->dataend;
 $smtp->quit;
 
